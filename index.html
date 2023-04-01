@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alarm Clock</title>
-    <link rel="icon" type="image/x-icon" href="./files/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./files/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="row"></div>
+      <div class="setAlarm">
+        <h1>00:00:00 AM</h1>
+        <div class="content">
+          <div class="column">
+            <select>
+              <option value="Hours">Hours</option>
+            </select>
+          </div>
+          <div class="column">
+            <select>
+              <option value="Minutes">Minutes</option>
+            </select>
+          </div>
+          <div class="column">
+            <select>
+              <option value="Seconds">Seconds</option>
+            </select>
+          </div>
+          <div class="column">
+            <select>
+              <option value="AM/PM">AM/PM</option>
+            </select>
+          </div>
+        </div>
+        <button>Set Alarm</button>
+      </div>
+      <div class="displayAlarms">
+        <h2>Alarms</h2>
+        <div class="displayContent">
+          <ol>
+            <li>
+              <span class="time">00:00:00 AM</span>
+              <i class="fa fa-trash-o"></i>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
