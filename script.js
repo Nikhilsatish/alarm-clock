@@ -78,7 +78,7 @@ function setAlarm(time, fetching = false) {
 
 // save alarm to local storage
 function saveAlarm(time) {
-    const alarms = checkAlarams();
+    const alarms = checkAlarms();
 
     alarms.push(time);
     localStorage.setItem("alarms", JSON.stringify(alarms));
@@ -99,8 +99,8 @@ function addAlarmToDom(time, intervalId) {
     alarmContainer.prepend(alarm);
 }
 
-// Is alarms saved in Local Storage?
-function checkAlarams() {
+// save alarm in Local Storage
+function checkAlarms() {
     let alarms = [];
     const isPresent = localStorage.getItem("alarms");
     if (isPresent) alarms = JSON.parse(isPresent);
@@ -119,7 +119,7 @@ function deleteAlarm(event, time, intervalId) {
 }
 
 function deleteAlarmFromLocal(time) {
-    const alarms = checkAlarams();
+    const alarms = checkAlarms();
 
     const index = alarms.indexOf(time);
     alarms.splice(index, 1);
@@ -128,7 +128,7 @@ function deleteAlarmFromLocal(time) {
 
 // Fetching alarms from local storage
 function fetchAlarm() {
-    const alarms = checkAlarams();
+    const alarms = checkAlarms();
 
     alarms.forEach((time) => {
         setAlarm(time, true);
