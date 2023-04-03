@@ -1,4 +1,4 @@
-# alarm-clock
+# Alarm-clock
 Alarm clock using vanilla javascript
 
 Features
